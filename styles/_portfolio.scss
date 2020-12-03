@@ -1,0 +1,43 @@
+.portfolio-container{
+    background: #323232;
+}
+
+.portfolio{
+    min-height: 90vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        color: black;
+
+        .card{
+            background: white;
+            margin: 0rem 6rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 2rem;
+            overflow: hidden;
+            max-height: 60vh;
+
+            h4{
+                margin: 3rem 0rem;
+            }
+
+            p{
+                padding: 2rem;
+            }
+
+            img{
+                object-fit: cover;
+                max-height: 60%;
+
+            }
+        }
+    }
+}

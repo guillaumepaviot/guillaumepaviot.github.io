@@ -1,0 +1,28 @@
+.contact{
+    height: 100%;
+    background: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh;
+
+    ul{
+        display: flex;
+        flex: 1;
+        list-style: none;
+        justify-content: space-between;
+
+        li, img{
+            max-height: 5vh;
+            background: black;
+            flex-direction: row;
+            padding: 0vh 2vh;
+        }
+    }
+
+    h1{
+        flex: 3;
+    }
+}
