@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    color: white;
+    color: #5D6E80;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -42,7 +42,7 @@ li{
 }
 
 a{
-    color: white;
+    color: #5D6E80;
     text-decoration: none;
 }
 
@@ -50,3 +50,86 @@ a{
 @import 'portfolio';
 @import 'contact';
 @import 'aboutme';
+
+@media screen and (max-width: 1200px){
+    html{
+        font-size: 50%;
+    }
+
+    nav{
+        #logo{
+            flex: 1;
+        }
+
+        ul{
+            li{
+                margin-left: 5rem;
+            }
+        }
+    }
+
+    .intro{
+        grid-template-columns: 10% 1fr 10%;
+
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+        img,
+        h2,
+        .info{
+            grid-column: 2/3;
+            text-align: center;
+        }
+    }
+
+    .aboutme{
+
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: 20vh 1fr 0.5fr;
+        text-align: center;
+
+        h2{
+            grid-column: 2/3;
+        }
+
+        h4{
+            grid-column: 2/3;
+            text-align: center;
+            grid-row: 2/3;
+        }
+
+        ul{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        
+    }
+
+    .portfolio{
+        align-items: center;
+        h2{
+            margin-top: 5rem;
+        }
+        .cards{
+            flex-direction: column;
+            width: 100%;
+            
+            .card{
+                margin: 5rem 0rem;
+
+                img{
+                    max-height: 20rem;
+                }
+            }
+        }
+    }
+
+    .contact{
+        ul{
+            li{
+                font-size: 1rem;
+            }
+        }
+    }
+}

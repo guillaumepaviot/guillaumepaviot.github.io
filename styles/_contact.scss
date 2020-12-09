@@ -1,6 +1,6 @@
 .contact{
     height: 100%;
-    background: black;
+    background: #8CA5BF;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
@@ -14,11 +14,13 @@
         list-style: none;
         justify-content: space-between;
 
-        li, img{
-            max-height: 5vh;
-            background: black;
-            flex-direction: row;
-            padding: 0vh 2vh;
+        li{
+            text-align: center; 
+            img{
+              max-height: 5vh;
+                flex-direction: row;
+                padding: 0vh 2vh;
+            }
         }
     }
 

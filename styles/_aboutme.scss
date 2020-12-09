@@ -1,34 +1,38 @@
 .aboutme{
-    background: #131313;
-    min-height: 100vh;
-
+    background: #A8C7E6;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 10% 60% 20% 10%;
+    grid-template-rows: 15vh 60vh 15vh;
     
 
-    .text-container{
-        display: grid;
-        grid-template-columns: 10% 60% 20% 10%;
-        grid-template-rows: 1fr 1fr;
+    
+        
 
-        h2{
-            grid-column: 2/3;
-            padding: 5vh 0vh;
-        }
+    h2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 5vh 0vh;
+    }
 
-        h3{
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
 
-        h4{
-            grid-column: 2/3;
-            grid-row: 2/3;
-            text-align: end;
-        }
+    h4{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: left;
+        align-self: center;
+        margin: 5vw;
+    }
 
-        ul{
-            list-style: none;
-            grid-column: 3/4;
-            grid-row: 2/3;
+    ul{
+        list-style: none;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        align-self: center;
+
+        li{
+          padding: 2rem 0rem;  
         }
+            
     }
 }

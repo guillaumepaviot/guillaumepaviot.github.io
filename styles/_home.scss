@@ -1,9 +1,9 @@
 .home{
-    background: radial-gradient(#525252, #131313);
+    background: radial-gradient(#A8C7E6, #ffffff);
 }
 
 .nav-container{
-    background: rgb(7,7,7);
+    background: #8CA5BF;
 }
 
 nav{
@@ -25,6 +25,7 @@ nav{
     #logo{
         flex: 3;
         position: relative;
+        color: black;
         &::after{
             content: "";
             position: absolute;
@@ -32,15 +33,15 @@ nav{
             left: 0;
             width: 19rem;
             height: 6rem;
-            background: rgb(49, 121, 255);
+            background: #A8C7E6;
             border-radius: 50%;
             transform: translate(-5%, -20%);
             mix-blend-mode: screen;
         }
     }
     .contact{
-        background: rgb(49, 121, 255);
-        padding: 1rem 2rem;
+        background: #ffffff;
+        padding: 0rem 2rem;
         border-radius: 2rem;
     }
 }
@@ -49,7 +50,7 @@ nav{
     display: grid;
     min-height: 90vh;
     grid-template-columns: 10% repeat(3, minmax(10rem,1fr)) 10%;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
 
     h2{
         grid-column: 2/3;
@@ -69,9 +70,9 @@ nav{
     .info{
         grid-row: 3/4;
         grid-column: 4/5;
+        text-align: center;
 
         h3{
-            padding-bottom: 3rem;
         }
     }
 }

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  color: white;
+  color: #5D6E80;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -43,16 +43,16 @@ li {
 }
 
 a {
-  color: white;
+  color: #5D6E80;
   text-decoration: none;
 }
 
 .home {
-  background: radial-gradient(#525252, #131313);
+  background: radial-gradient(#A8C7E6, #ffffff);
 }
 
 .nav-container {
-  background: #070707;
+  background: #8CA5BF;
 }
 
 nav {
@@ -89,6 +89,7 @@ nav #logo {
       -ms-flex: 3;
           flex: 3;
   position: relative;
+  color: black;
 }
 
 nav #logo::after {
@@ -98,7 +99,7 @@ nav #logo::after {
   left: 0;
   width: 19rem;
   height: 6rem;
-  background: #3179ff;
+  background: #A8C7E6;
   border-radius: 50%;
   -webkit-transform: translate(-5%, -20%);
           transform: translate(-5%, -20%);
@@ -106,8 +107,8 @@ nav #logo::after {
 }
 
 nav .contact {
-  background: #3179ff;
-  padding: 1rem 2rem;
+  background: #ffffff;
+  padding: 0rem 2rem;
   border-radius: 2rem;
 }
 
@@ -117,8 +118,8 @@ nav .contact {
   min-height: 90vh;
   -ms-grid-columns: 10% (minmax(10rem, 1fr))[3] 10%;
       grid-template-columns: 10% repeat(3, minmax(10rem, 1fr)) 10%;
-  -ms-grid-rows: 1fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr;
+  -ms-grid-rows: 1fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr;
 }
 
 .intro h2 {
@@ -154,14 +155,11 @@ nav .contact {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
-}
-
-.intro .info h3 {
-  padding-bottom: 3rem;
+  text-align: center;
 }
 
 .portfolio-container {
-  background: #323232;
+  background: #ffffff;
 }
 
 .portfolio {
@@ -186,12 +184,11 @@ nav .contact {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: black;
 }
 
 .portfolio .cards .card {
-  background: white;
-  margin: 0rem 6rem;
+  background: #BBDDFF;
+  margin: 0rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,6 +200,9 @@ nav .contact {
   border-radius: 2rem;
   overflow: hidden;
   max-height: 60vh;
+  border-style: solid;
+  border-width: 0.1%rem;
+  border-color: #BBDDFF;
 }
 
 .portfolio .cards .card h4 {
@@ -221,7 +221,7 @@ nav .contact {
 
 .contact {
   height: 100%;
-  background: black;
+  background: #8CA5BF;
   padding-left: 10%;
   padding-right: 10%;
   display: -webkit-box;
@@ -249,9 +249,12 @@ nav .contact {
           justify-content: space-between;
 }
 
-.contact ul li, .contact ul img {
+.contact ul li {
+  text-align: center;
+}
+
+.contact ul li img {
   max-height: 5vh;
-  background: black;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -266,46 +269,41 @@ nav .contact {
 }
 
 .aboutme {
-  background: #131313;
-  min-height: 100vh;
-}
-
-.aboutme .text-container {
+  background: #A8C7E6;
+  min-height: 90vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10% 60% 20% 10%;
       grid-template-columns: 10% 60% 20% 10%;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: 15vh 60vh 15vh;
+      grid-template-rows: 15vh 60vh 15vh;
 }
 
-.aboutme .text-container h2 {
+.aboutme h2 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   padding: 5vh 0vh;
 }
 
-.aboutme .text-container h3 {
+.aboutme h4 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  text-align: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 5vw;
 }
 
-.aboutme .text-container h4 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  text-align: end;
-}
-
-.aboutme .text-container ul {
+.aboutme ul {
   list-style: none;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
@@ -313,5 +311,96 @@ nav .contact {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.aboutme ul li {
+  padding: 2rem 0rem;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  nav #logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav ul li {
+    margin-left: 5rem;
+  }
+  .intro {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  .intro img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .intro img,
+  .intro h2,
+  .intro .info {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .aboutme {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+    -ms-grid-rows: 20vh 1fr 0.5fr;
+        grid-template-rows: 20vh 1fr 0.5fr;
+    text-align: center;
+  }
+  .aboutme h2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .aboutme h4 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .aboutme ul {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .portfolio {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolio h2 {
+    margin-top: 5rem;
+  }
+  .portfolio .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .portfolio .cards .card {
+    margin: 5rem 0rem;
+  }
+  .portfolio .cards .card img {
+    max-height: 20rem;
+  }
+  .contact ul li {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
