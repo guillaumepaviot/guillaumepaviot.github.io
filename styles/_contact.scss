@@ -1,30 +1,61 @@
 .contact{
-    height: 100%;
-    background: #8CA5BF;
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3vh;
+    height: 90vh;
+    background: #69C6DB;
+    color: white;
+    display: grid;
+    grid-template-columns: 10% 7% 66% 17%;
+    grid-template-rows: 5% 5% repeat(5, 14%);
+    grid-row-gap: 2vh;
 
-    ul{
-        display: flex;
-        flex: 1;
-        list-style: none;
-        justify-content: space-between;
+    a{ 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        .button{
+            padding: 4vh 0vh;
+            transition: background-color 0.5;
 
-        li{
-            text-align: center; 
-            img{
-              max-height: 5vh;
-                flex-direction: row;
-                padding: 0vh 2vh;
+            h4{
+                color: white;
             }
         }
+
     }
 
-    h1{
-        flex: 3;
+    .button:hover{
+        background-color: #65EBBA;
+        border-radius: 45px;
+    }
+
+    .cv{
+        grid-row: 4/5;
+        grid-column: 3/4;
+    }
+
+    .linkedin{
+        grid-row: 5/6;
+        grid-column: 3/4;
+
+        
+    }
+
+    .github{
+        grid-row: 6/7;
+        grid-column: 3/4;
+    }
+
+    .instagram{
+        grid-row: 7/8;
+        grid-column: 3/4;
+    }
+
+    
+    
+    
+
+    h2{
+        grid-row: 2/3;
+        grid-column: 2/4;
     }
 }

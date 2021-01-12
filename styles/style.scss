@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    color: #5D6E80;
+    color: #68B5F2;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -50,6 +50,8 @@ a{
 @import 'portfolio';
 @import 'contact';
 @import 'aboutme';
+@import 'projectdetails';
+
 
 @media screen and (max-width: 1200px){
     html{
@@ -69,39 +71,68 @@ a{
     }
 
     .intro{
-        grid-template-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 10% 5% 45% 5% 45%;
+
+        h2{
+            text-align: center;
+            grid-column: 2/3;
+        }
 
         img{
-            width: 100%;
-            object-fit: contain;
+            grid-column: 2/3;
+            grid-row: 3/4;
+            width: 50%;
         }
-        img,
-        h2,
+
         .info{
             grid-column: 2/3;
+            grid-row: 5/6;
             text-align: center;
+            margin: 0px 10vw;
+
+            ul{
+                text-align: center;
+                a li{
+                   width: 40vw;
+                   text-align: center;
+                   margin: 3vh 0vw;
+               }
+            }
         }
     }
 
     .aboutme{
-
-        grid-template-columns: 10% 1fr 10%;
-        grid-template-rows: 20vh 1fr 0.5fr;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 5% 40% 5% 45%;
         text-align: center;
 
-        h2{
-            grid-column: 2/3;
-        }
-
-        h4{
-            grid-column: 2/3;
-            text-align: center;
+        .about{
             grid-row: 2/3;
+            grid-column: 2/3;
+
+            h2{
+                padding: 2vh;
+            }
+    
+            h4{
+                text-align: center;
+                margin: 0px 5vw;
+                font-size: calc(1.5vw + 1rem);
+                
+            }
         }
 
-        ul{
+        .skills{
             grid-column: 2/3;
-            grid-row: 3/4;
+            grid-row: 4/5;
+            h2{
+                padding: 2vh;
+            }
+            ul li{
+                padding: 1vh;
+                font-size: calc(1.5vw + 1rem);
+            }
         }
         
     }
@@ -113,23 +144,28 @@ a{
         }
         .cards{
             flex-direction: column;
-            width: 100%;
+            width: 80%;
             
             .card{
-                margin: 5rem 0rem;
+                margin: 2vh auto;
+                width: 50vw;
+                height: 60vh;
 
                 img{
-                    max-height: 20rem;
+                    max-height: 50%;
                 }
             }
         }
     }
 
     .contact{
-        ul{
-            li{
-                font-size: 1rem;
-            }
+        height: 70vh;
+        grid-row-gap: 0vh;
+        grid-template-rows: 5% 5% repeat(5, 15%);
+
+        a .button{
+            padding: 2vh 0vh;
         }
     }
 }
+

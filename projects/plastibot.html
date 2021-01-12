@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastibot</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="../index.html"><h1>Acceuil</h1></A>
+        </nav>
+    </div>
+    <section class="projectdetails">
+        <div class="entete">
+            <h1 class="title">Plastibot</h1>
+            <h5 class="date">19/12/20</h5>
+        </div>
+        <div class="details">
+            <img src="../img/logo_plastibot.jpg" alt="" width="100%"/>
+            <h3>À propos du projet</h3> 
+            <p>Ce projet fait partie de l'UE Commande Entreprise de l'école et a été réalise en groupe avec d'autres étudiants de l'école, de différentes spécialisation.<br/><br/>
+                L'objectif de ce projet était de réaliser un chatbot afin de dynamiser la FAQ de l'ONG. Pour cela, le chatbot devait pouvoir être intégré sur un site web, devait être dynamique et interactif.<br/><br/>
+                La technologie retenue pour le chatbot est d'utiliser une réseau neuronal sous Tensorflow pour analyser la question puis trouver une réponse, et utiliser le framework Flask pour l'affichage et le rendu.<br/><br/>
+                Les données sont stockées dans un fichier JSON, qui contient, pour chaque thème de question : le nom du thème, les différentes questions liées à ce thème ainsi que la réponse associée.<br/><br/>
+                Afin de rendre intuitives les modifications de la base de données du chatbot, le client utilise une version Excel de cette base de questions, qui sera ensuite convertie en fichier JSON par le script Python, pour que ce soit utilisable par le chatbot.<br/><br/>
+                L'entraînement du réseau neuronal a but de permettre au chatbot de trouver à quel thème l'utilisateur fait référence dans sa question, grâce à des questions types pour chaque qu'on lui fournit. Le programme
+                d'entraînement exporte ensuite le réseau pour qu'il soit utilisable sur la page web.<br/><br/>
+                Seules quelques fonctions relatives au réseau neuronal seront utilisées dan sel backend de la page web, notamment celles qui permettent de tokeniser la question de l'utilisateur et celle qui permet d'avoir une réponse du modèle exporté par le programme d'entraînement. <br/><br/>
+                Nous avons choisit le framework Flask car c'est un framework Python et qu'il était léger, ce qui permettait de facilement coder le backend pour une page HTML. <br/><br/>
+                On affiche un chat dans lequel l'utilisateur peut entrer son message, Flask va ensuite afficher son message, l'analyser, récupérer la réponse du modèle et l'afficher dans le chat.<br/><br/>
+                Finalement, on a un chatbot rapide et intuitif, avec une précision de plus de 90% sur l'ensemble des 84 thèmes de questions.</p>
+            <h3>Technologies utilisées</h3>
+            <ul>
+                <li>Python</li>
+                <li>Tensorflow</li>
+                <li>Flask</li>
+                <li>HTML</li>
+                <li>JSON</li>
+                <li>Github</li>
+            </ul>
+        </div>
+        <div class="fin">
+            <ul>
+                <li><a href="../index.html#contact" class="bouton">Contactez Moi</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

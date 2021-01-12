@@ -1,38 +1,53 @@
 .aboutme{
-    background: #A8C7E6;
-    min-height: 90vh;
+    background: #ffffff;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 10% 60% 20% 10%;
-    grid-template-rows: 15vh 60vh 15vh;
+    grid-template-columns:5vw 43vw 16vw 31vw 5vw;
+    grid-template-rows: 10vh 28vh 34vh 18vh;
+    color: white;
     
 
     
-        
+    .about{
+        grid-row: 2/4;
+        grid-column: 2/4;
+        background-color: #68B5F2;
 
-    h2{
-        grid-column: 2/3;
-        grid-row: 1/2;
-        padding: 5vh 0vh;
-    }
-
-
-    h4{
-        grid-column: 2/3;
-        grid-row: 2/3;
-        text-align: left;
-        align-self: center;
-        margin: 5vw;
-    }
-
-    ul{
-        list-style: none;
-        grid-column: 3/4;
-        grid-row: 2/3;
-        align-self: center;
-
-        li{
-          padding: 2rem 0rem;  
+        h2{
+            padding: 5vh 5vw;
         }
-            
+    
+    
+        h4{
+            text-align: justify;
+            margin: 0vw 5vw;
+            margin-right: 20vw;
+            font-weight: lighter;
+            font-size: 1.5vw;
+        }
+    }   
+
+    .skills{
+        grid-row: 3/5;
+        grid-column: 3/5;
+        background-color: #69C6DB;
+
+        h2{
+            padding: 3vh 5vw;
+            font-size: 8vh;
+        }
+
+        ul{
+            list-style: none;
+            align-self: center;
+            margin: 0vw 5vw;
+    
+            li{
+                font-size: 1.3vw;
+                padding: 2vh 0rem;  
+                text-align: justify;
+            }
+                
+        }
     }
 }

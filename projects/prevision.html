@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévision de la consommation électrique</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <a href="../index.html"><h1>Acceuil</h1></A>
+        </nav>
+    </div>
+    <section class="projectdetails">
+        <div class="entete">
+            <h1 class="title">Prévision de la consommation électrique</h1>
+            <h5 class="date">10/01/21</h5>
+            <a href="https://github.com/guillaumepaviot/energy-forecast" target="_blank" class="bouton">Code Source</a>
+        </div>
+        <div class="details">
+            <img src="../img/production-electricite.jpg" alt="" width="100%"/>
+            <h3>À propos du projet</h3> 
+            <p>Le but de ce projet est de découvrir différentes méthodes de prévisions temporelles et de les rendre visibles à partir d'une page web.<br/><br/>
+                Pour les données, j'utilise l'<a href="https://data.enedis.fr/pages/accueil/?id=init">Open Data d'Enedis</a>. Je voulais utiliser leur API pour accéder aux données mais malheureusement, je ne pouvais pas accéder à une quantité de données suffisantes pour avoir des prévisions correctes.<br/><br/>
+                J'ai choisi d'utiliser le <a href="https://data.enedis.fr/explore/dataset/bilan-electrique-demi-heure/information/">bilan électrique au pas demi-heure</a> pour prévoir la production et la consommation d'électricité en France car je pense que les prévisions faites pourront servir de base dans d'autres futurs projets.<br/><br/>
+                Comme l'API renvoie les données en format JSON, j'ai décidé de télécharger le jeu de données dans ce format, pour ensuite pouvoir continuer d'utiliser les modèles avec les nouvelles données récupérées via l'API et ainsi passer d'un modèle en batch learning à un modèle en online learning. <br/><br/>
+                De toutes les propriétés du jeu de données, je conserve seulement l'horodate, l'injection RTE ainsi que la consommation totale. <br/><br/>
+                Je pensais aussi utiliser la température présente dans les data d'Enedis mais cela voudrait dire prévoir la température de la France à partir de la date et l'heure seulement. Comme ce n'est pas le but de ce projet, je garde l'idée pour potentiellement améliorer mon modèle.<br/><br/>
+                Avant de commencer l'élaboration de modèles, j'analyse les données formatées à la recherche de tendances ou de saisonnalités, ce qui est visible dans la production et la consommation d'électricité.
+                Finalement, on a un chatbot rapide et intuitif, avec une précision de plus de 90% sur l'ensemble des 84 thèmes de questions.</p>
+            <h3>Technologies utilisées</h3>
+            <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>JSON</li>
+            </ul>
+        </div>
+        <div class="fin">
+            <ul>
+                <li><a href="../index.html#contact" class="bouton">Contactez Moi</a></li>
+                <li><a href="https://github.com/guillaumepaviot/energy-forecast" target="_blank" class="bouton">Code Source</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

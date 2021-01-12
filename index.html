@@ -1,92 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guillaume Paviot</title>
-    <meta name="description" content="width=width-device, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/> 
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
-
-  </head>
-  
-  <body>
-    <main>
-      <div class="nav-container">
+</head>
+<body>
+    <div class="nav-container">
         <nav>
-          <h1 id="logo">Guillaume Paviot</h1>
-          <ul>
-            <li><a href="#moi">Moi</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a class="contact" href="#contac">Contact</a></li>
-          </ul>
+            <h1>Guillaume Paviot</h1>
+            <ul>
+                <li><a href="#moi">À propos</a></li>
+                <li><a href="#portfolio">Mes projets</a></li>
+                <li><a  href="#contact">Contact</a></li>
+            </ul>
         </nav>
-      </div>
-      <section class="home">
+    </div>
+    <section class="home">
         <div class="intro">
-          <h2>Guillaume Paviot</h2>
-          <img src="./img/P1030611.jpg" alt="moi">
-          <div class="info">
-            <h3>Web developper et Data scientist</h3>
-            <p>
-              Passioné par les nouvelles technologies, je m'interesse principalement au développement
-              web et à la science des données
-            </p>
-          </div>
+            <h2>Guillaume Paviot</h2>
+            <img src="./img/moi_site.png" alt="moi">
+            <div class="info">
+                <h3>Data scientist</h3>
+                <p>
+                    Passioné par les nouvelles technologies, 
+                    je m'interesse principalement au développement web 
+                    et à la science des données, ainsi qu’à l’énvironnement
+                </p>
+                <ul>
+                    <a href="#contact"><li>Contactez moi</li></a>
+                    <a href="./img/CV_PAVIOT_guillaume.pdf" target="_blank" download=""><li>Mon CV</li></a>
+                </ul>
+            </div>
         </div>
-      </section>
-      <section class="aboutme" id ="moi">
-        <h2>À propos de moi</h2>
-        <h4>
-          Actuellement en école d'ingénieurs, je passe mon temps libre à programmer et prendre des photos. Je suis 
-          particulièerement intéressé par les l'environnement et les nouvelles technologies. Développer des sites web
-          et analyser des données sont pour moi des moyens de raconter une histoire, tout comme la photo. Vous pouvez 
-          retrouver mes différents projets informatiques sur <a href="https://github.com/guillaumepaviot">Github</a>
-          ainsi que mes photos sur mon <a href="https://www.instagram.com/llaumeggui/">Instagram</a>.
-        </h4>
-        <ul>
-          <li>Analyse des données sous Python avec Numpy, Pandas et Keras</li>
-          <li>Développement web en HTML, CSS, Javascript et PHP</li>
-          <li>Retouche photos avec Ligthroom et Photoshop, et montage vidéo avec DaVinci</li>
-        </ul>
-      </section>
-      <div class="portfolio-container" id="portfolio">
+    </section>
+    <section class="aboutme" id ="moi">
+        <div class="about">
+            <h2>À propos de moi</h2>
+            <h4>
+                Actuellement en école d'ingénieurs, je passe mon temps libre à programmer et prendre des photos. 
+                Je suis particulièerement intéressé par l'environnement et les nouvelles technologies. 
+                Développer des sites web et analyser des données sont pour moi des moyens de raconter une histoire, 
+                tout comme la photo.
+            </h4>
+        </div>   
+        <div class="skills">
+            <h2>Mes compétences</h2>
+            <ul>
+                <li>Analyse des données sous Python avec Pandas et machine learning grâce à Tensorflow</li>
+                <li>Développement web en HTML, CSS, Javascript et Django</li>
+                <li>Retouche photos avec Ligthroom et Photoshop, et montage vidéo avec DaVinci</li>
+            </ul>
+        </div>
+    </section>
+    <div class="portfolio-container" id="portfolio">
         <section class="portfolio">
-          <h2>Portfolio</h2>
-          <div class="cards">
-            <div class="card">
-              <img src="./img/logo_plastibot.jpg" alt="plastibot">
-              <h4>Plastibot</h4>
-              <p>Réalisation en groupe d'un chatbot</p>
+            <h2>Mes projets</h2>
+            <div class="cards">
+              <div class="card">
+                <img src="./img/logo_plastibot.jpg"  alt="Plastibot">
+                <h4>Plastibot</h4>
+                <p>Création d'un chatbot pour une ONG</p>
+                <ul class="info">
+                  <a href="projects/plastibot.html"><li>Détails</li></a>
+                </ul>
+              </div>
+              <div class="card">
+                <img src="./img/production-electricite.jpg"  alt="Prévision d'électricité">
+                <h4>Prévision de la consommation électrique</h4>
+                <p>Analyse et modélisation de la consommation électrique française</p>
+                <ul class="info">
+                  <a href="projects/prevision.html"><li>Détails</li></a>
+                  <a href="https://github.com/guillaumepaviot/energy-forecast" target="_blank" class="bouton"><li>GitHub</li></a>
+                </ul>
+              </div>
+              <div class="card">
+                <img src="./img/mnist.jpg"  alt="Reconnaissance de chiffres">
+                <h4>Reconnaissance de chiffres</h4>
+                <p>Développement d'une IA qui reconnaît les chiffres écrits à la main</p>
+                <ul class="info">
+                  <a href="projects/mnist.html"><li>Détails</li></a>
+                </ul>
+              </div>
             </div>
-            <div class="card">
-              <img src="./img/mnist.jpg" alt="MNIST">
-              <h4>MNIST Digit classifier</h4>
-              <p>Mise en place d'un réseau neuronal pour classifier les numéros du MNIST</p>
-            </div>
-            <div class="card">
-              <img src="./img/tsp.jpg" alt="pyrat">
-              <h4>Pyrat</h4>
-              <p>Algorithme génétique afin de résoudre le problème du voyageur de commerce</p>
-            </div>
-          </div>
         </section>
-      </div>
-      <section class="contact" id="contact">
-        <h1>Contactez moi</h1>
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/llaumeggui/"><img src="./img/instagram_logo.png" alt="">Instagram</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/guillaume-paviot-5612a8192/"><img src="./img/linkedin_logo.png" alt="">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/guillaumepaviot"><img src="./img/github_logo.png" alt="">Github</a>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </body>
-
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contactez moi</h2>   
+        <a href="./img/CV_PAVIOT_guillaume.pdf" class="cv" target="_blank" download="">
+            <div class="button">
+                <h4>Vous pouvez télécharger mon CV</h4>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/guillaume-paviot-5612a8192/" class="linkedin" target="_blank">
+            <div class="button">
+                <h4>Vous retrouverez sur mon LinkedIn des actualités qui m’intéressent</h4>
+            </div>
+        </a>
+        <a href="https://github.com/guillaumepaviot" class="github" target="_blank">
+            <div class="button">
+                <h4> Sur mon Github, vous aurez accès au code source de mes projets</h4>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/llaumeggui/" class="instagram" target="_blank">
+            <div class="button">
+                <h4>Toutes mes photos et mes vidéos sont à retrouver sur mon profil Instagram</h4>
+            </div>
+        </a>
+    </div>
+</body>
 </html>
