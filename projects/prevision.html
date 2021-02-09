@@ -18,20 +18,40 @@
     <section class="projectdetails">
         <div class="entete">
             <h1 class="title">Prévision de la consommation électrique</h1>
-            <h5 class="date">10/01/21</h5>
+            <h5 class="date">17/01/21</h5>
             <a href="https://github.com/guillaumepaviot/energy-forecast" target="_blank" class="bouton">Code Source</a>
         </div>
         <div class="details">
             <img src="../img/production-electricite.jpg" alt="" width="100%"/>
             <h3>À propos du projet</h3> 
             <p>Le but de ce projet est de découvrir différentes méthodes de prévisions temporelles et de les rendre visibles à partir d'une page web.<br/><br/>
-                Pour les données, j'utilise l'<a href="https://data.enedis.fr/pages/accueil/?id=init">Open Data d'Enedis</a>. Je voulais utiliser leur API pour accéder aux données mais malheureusement, je ne pouvais pas accéder à une quantité de données suffisantes pour avoir des prévisions correctes.<br/><br/>
-                J'ai choisi d'utiliser le <a href="https://data.enedis.fr/explore/dataset/bilan-electrique-demi-heure/information/">bilan électrique au pas demi-heure</a> pour prévoir la production et la consommation d'électricité en France car je pense que les prévisions faites pourront servir de base dans d'autres futurs projets.<br/><br/>
+                Pour les données, j'utilise l'<a href="https://data.enedis.fr/pages/accueil/?id=init" target="_blank">Open Data d'Enedis</a>. Je voulais utiliser leur API pour accéder aux données mais malheureusement, je ne pouvais pas accéder à une quantité de données suffisantes pour avoir des prévisions correctes.<br/><br/>
+                J'ai choisi d'utiliser le <a href="https://data.enedis.fr/explore/dataset/bilan-electrique-demi-heure/information/" target="_blank">bilan électrique au pas demi-heure</a> pour prévoir la production et la consommation d'électricité en France car je pense que les prévisions faites pourront servir de base dans d'autres futurs projets.<br/><br/>
                 Comme l'API renvoie les données en format JSON, j'ai décidé de télécharger le jeu de données dans ce format, pour ensuite pouvoir continuer d'utiliser les modèles avec les nouvelles données récupérées via l'API et ainsi passer d'un modèle en batch learning à un modèle en online learning. <br/><br/>
-                De toutes les propriétés du jeu de données, je conserve seulement l'horodate, l'injection RTE ainsi que la consommation totale. <br/><br/>
+                De toutes les propriétés du jeu de données, je conserve seulement l'horodate et la consommation totale. <br/><br/>
                 Je pensais aussi utiliser la température présente dans les data d'Enedis mais cela voudrait dire prévoir la température de la France à partir de la date et l'heure seulement. Comme ce n'est pas le but de ce projet, je garde l'idée pour potentiellement améliorer mon modèle.<br/><br/>
-                Avant de commencer l'élaboration de modèles, j'analyse les données formatées à la recherche de tendances ou de saisonnalités, ce qui est visible dans la production et la consommation d'électricité.
-                Finalement, on a un chatbot rapide et intuitif, avec une précision de plus de 90% sur l'ensemble des 84 thèmes de questions.</p>
+                Avant de commencer l'élaboration de modèles, j'analyse les données formatées à la recherche de tendances ou de saisonnalités, ce qui est visible dans la consommation d'électricité.<br/><br/>
+                Pour cela, j'utilise le module <a href="https://www.statsmodels.org/stable/index.html" target="_blank">satsmodel</a> de Python qui permet d'extraire les tendances d'un jeu de données échantilloné au mois.<br/><br/>
+                <img src="../img/data.png" alt="Whole data"/>
+                <img src="../img/trend.png" alt="Trend"/>
+                <img src="../img/season.png" alt="Seasonality"/>
+                Le premier graphique montre l'ensemble des données, tandis que les deux suivants montrent la tendance de la comsommation ainsi que sa variation saisonnière.<br/><br/>
+                On remarque tout de suite la forte saisonnalité de la consommation électrique : la consommation pique en hiver avant de s'atténuer en été. De plus, globalement, la consommation électrqiue française semble diminuer.<br/><br/>
+                On dit alors que la consommation d'électricté est thermosensible, car sensible à la température extérieure. RTE estime que la consommation française augmente de 2400MW pour chaque degré en moins en hiver. Cela est dû principalement au chauffage des bâtiments (un tiers des foyers français sont chauffés à l'électricité) ainsi qu'à la production d'eau chaude.<br/><br/>
+                La température sera donc un facteur important à prendre en compte pour de futures améliorations du modèle.<br/><br/>
+                Pour le modèle de prévision, j'utilise le logiciel <a href="https://facebook.github.io/prophet/" target="_blank" >Prophet</a> développé par Facebook, car il permet d'avoir des prévisions rigoureuses tout en intégrant les effets de tendances qui existent dans les données ainsi que les dates (jours de la semaine).<br/><br/>
+                Un modèle de prévisions progammé grâce à des réseaux de neurones récurrents est possible (<a href="https://www.tensorflow.org/tutorials/structured_data/time_series" target="_blank"> Tutoriel de Tensorflow </a>) mais demande plus de travail sur les données notamment sur la représentation numérique des dates et les effets de tendance. De plus, ils ne sont pas forcéments plus précis que les modèles Prophet.<br/><br/>
+                Après entraînement sur les données, le modèles est capable de faire des prédictions mais aussi de donner différentes décompositons des données qu'il a analysé.<br/><br/>
+                On retrouve par exemple la décompostion annuelle, hebdomadaire et journalière.<br/><br/>
+                <img src="../img/yearly.png" alt="Yearly"/>
+                <img src="../img/weekly.png" alt="Weekly"/>
+                <img src="../img/Daily.png" alt="Daily"/>
+                On retrouve que sur une année, le pic de consommation est atteint fin janvier tandis que le minimum se trouve fin mai. Comme le modèle analyse les données à l'heure, il permet une décomposition plus fine que précédemment. On obtient alors une décomposition hebdomadaire avec un un minimum dans la nuit de samedi à dimanche, ainsi qu'une décompostion journalière avec un creux après minuit et des pics le midi et au moment du diner.<br/><br/>
+                <img src="../img/forecast.png" alt="Forecast">
+                Voici les prévisions que l'on obtient avec le modèle. Les points noirs réprésentent les données d'ENEDIS, la ligne bleu la prévision du modèle et la zone bleu claire réprésente la zone d'incertitudes du modèle. Les données vont du 12 au 19 décembre 2020, et la prévision s'étend jusqu'au 26 décembre.<br/><br/>
+                On retrouve la tendance hebdomadaire avec un creux le dimanche (le 13 et le 20), ainsi que les différents pics et creux lors des journées.<br/><br/>
+                L'examination visuelle n'est pas suffisante pour évaluer un modèle. Pour cela, je compte mettre à jour les données et évaluer l'erreur du modèle sur ses prévisions.
+            </p>
             <h3>Technologies utilisées</h3>
             <ul>
                 <li>Python</li>

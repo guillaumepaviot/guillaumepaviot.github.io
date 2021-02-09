@@ -516,6 +516,10 @@ nav h1 {
   text-align: justify;
 }
 
+.projectdetails .details p img {
+  width: 50vw;
+}
+
 .projectdetails .details h3 {
   margin: 1.5vh 0vh;
 }
