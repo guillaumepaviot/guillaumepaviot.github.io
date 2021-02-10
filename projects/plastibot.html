@@ -29,11 +29,16 @@
                 Les données sont stockées dans un fichier JSON, qui contient, pour chaque thème de question : le nom du thème, les différentes questions liées à ce thème ainsi que la réponse associée.<br/><br/>
                 Afin de rendre intuitives les modifications de la base de données du chatbot, le client utilise une version Excel de cette base de questions, qui sera ensuite convertie en fichier JSON par le script Python, pour que ce soit utilisable par le chatbot.<br/><br/>
                 L'entraînement du réseau neuronal a but de permettre au chatbot de trouver à quel thème l'utilisateur fait référence dans sa question, grâce à des questions types pour chaque qu'on lui fournit. Le programme
-                d'entraînement exporte ensuite le réseau pour qu'il soit utilisable sur la page web.<br/><br/>
-                Seules quelques fonctions relatives au réseau neuronal seront utilisées dan sel backend de la page web, notamment celles qui permettent de tokeniser la question de l'utilisateur et celle qui permet d'avoir une réponse du modèle exporté par le programme d'entraînement. <br/><br/>
+                d'entraînement exporte ensuite le modèle entrainé pour qu'il soit utilisable sur la page web.<br/><br/>
+                Seules quelques fonctions relatives au réseau neuronal seront utilisées dans le backend de la page web, notamment celles qui permettent de tokeniser la question de l'utilisateur et celle qui permet d'avoir une réponse du modèle que l'on vient d'exporter. <br/><br/>
                 Nous avons choisit le framework Flask car c'est un framework Python et qu'il était léger, ce qui permettait de facilement coder le backend pour une page HTML. <br/><br/>
+                <img src="../img/home.png" alt="Homescreen">
                 On affiche un chat dans lequel l'utilisateur peut entrer son message, Flask va ensuite afficher son message, l'analyser, récupérer la réponse du modèle et l'afficher dans le chat.<br/><br/>
-                Finalement, on a un chatbot rapide et intuitif, avec une précision de plus de 90% sur l'ensemble des 84 thèmes de questions.</p>
+                <img src="../img/greetings.png" alt="Greetings">
+                En plus des réponses aux questions de la FAQ, nous avons inclus des questions plus basiques comme des salutations.<br/><br/>
+                <img src="../img/answers.png" alt="Answers">
+                L'un des intérêts de cette façon de faire est que le modèle peut répondre de manières différentes sur le même thème. En effet, le client peut écrire deux réponses pour un thème et le bot utilisera une de ces réponses aléatoirement lorsque l'utilisateur lui posera une question sur ce thème. Cela permet de varier les réponses du bot et de le rendre un peu moins robotique. <br/><br/>
+                Finalement, nous avons un chatbot rapide et intuitif, avec une précision de plus de 90% sur l'ensemble des 84 thèmes de questions.</p>
             <h3>Technologies utilisées</h3>
             <ul>
                 <li>Python</li>
