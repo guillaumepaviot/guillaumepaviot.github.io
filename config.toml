@@ -1,0 +1,37 @@
+title = "Guillaume Paviot"
+baseURL = "https://guillaumepaviot.github.io"
+languageCode = "en-us"
+theme = "ananke"
+#themesDir = "../.."
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 6 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+canonifyURLs = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = "favicon.ico"
+  description = "The last theme you'll ever need. Maybe."
+  facebook = ""
+  twitter = "https://twitter.com/Guillaume_Pvt"
+  instagram = ""
+  youtube = ""
+  github = "https://github.com/guillaumepaviot"
+  gitlab = ""
+  linkedin = "https://www.linkedin.com/in/guillaume-paviot/"
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  kaggle = "https://www.kaggle.com/guillaumepvt"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  recent_posts_number = 5

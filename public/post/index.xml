@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Guillaume Paviot</title>
+    <link>https://guillaumepaviot.github.io/post/</link>
+    <description>Recent content in Projects on Guillaume Paviot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://guillaumepaviot.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A poem generator</title>
+      <link>https://guillaumepaviot.github.io/post/project-2/</link>
+      <pubDate>Mon, 05 Sep 2022 11:00:59 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-2/</guid>
+      <description>The goal of this project is to implement at low levels different NLP algorithms and neural nets in PyTorch to learn more about them. I train those algorithms on Les Fleurs du Mal written by French poet Charles Baudelaire.
+Current language model neural nets implemented:
+Bigram (with one, two character or one word as input) Bag of Words MLP, along the lines of Bengio et al. 2003 (with both characters or word as input) Link to GitHub Repository</description>
+    </item>
+    
+    <item>
+      <title>Ranking a video game&#39;s players</title>
+      <link>https://guillaumepaviot.github.io/post/project-5/</link>
+      <pubDate>Sun, 04 Sep 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-5/</guid>
+      <description>At the end of every year, the best League of Legend teams from all regions gather on one server to train before the World Championships. And this is the best time to scrape data from the API to answer the question: who is the strongest player ? Who is the strongest team ?
+I will reuse the code I used last year to scrape data and then explore the dataset with some visualisation.</description>
+    </item>
+    
+    <item>
+      <title>A network of Twitter accounts</title>
+      <link>https://guillaumepaviot.github.io/post/project-1/</link>
+      <pubDate>Mon, 25 Jul 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-1/</guid>
+      <description>The goal of this project was to learn more about networks and use the Twitter API.
+During a trending topic on Twitter and Twitch involving a lot of reactions from different communities, I scrapped almost 29 000 tweets from the API.
+To be used in Gephi, I had to clean the data and scrape the missing values from other endpoints. Then, I separated the cleaned data into an edges CSV file and a nodes CSV file.</description>
+    </item>
+    
+    <item>
+      <title>Forecasting electric consumption</title>
+      <link>https://guillaumepaviot.github.io/post/project-4/</link>
+      <pubDate>Sun, 17 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-4/</guid>
+      <description>With this project, I wanted to learn about time series and how to forecast them. For the data, I downloaded a JSON file from ENEDIS open data, the french electrical distributor, which reprensents the volumes of energy injected, extracted, produced or consumed in the Enedis mesh over a period of time given to the step of half an hour.
+From all the features, I only kept the timestamp and total consumption.</description>
+    </item>
+    
+    <item>
+      <title>A chatbot talking about plastic</title>
+      <link>https://guillaumepaviot.github.io/post/project-3/</link>
+      <pubDate>Sat, 19 Dec 2020 10:58:08 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-3/</guid>
+      <description>This group project was an academic project for the NGO The Sea Cleaners. The goal was to develop a chatbot to make their FAQ more attractive.
+The requirements were :
+the chatbot could be integrated in a website the chatbot is interactive the code is readable and the bot is easy to use for non coder We choose to use Tensorflow to analyse the question and find and answer, and integrate it in Flask.</description>
+    </item>
+    
+  </channel>
+</rss>
