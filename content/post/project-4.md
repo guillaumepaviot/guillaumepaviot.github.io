@@ -4,26 +4,40 @@ description: "Analyzing and forecasting electricity consumption in France"
 featured_image: "/images/project-4/production_electricite.jpg"
 title: "Forecasting electric consumption"
 ---
+This project aimed to explore time series analysis and forecasting using energy consumption data from [ENEDIS open data](https://data.enedis.fr/pages/accueil/?id=init), the French electrical distributor. The dataset includes energy volumes injected, extracted, produced, or consumed in the Enedis network, recorded every half hour.
 
-With this project, I wanted to learn about time series and how to forecast them. For the data, I downloaded a JSON file from [ENEDIS open data](https://data.enedis.fr/pages/accueil/?id=init), the french electrical distributor, which reprensents the volumes of energy injected, extracted, produced or consumed in the Enedis mesh over a period of time given to the step of half an hour.  
-From all the features, I only kept the timestamp and total consumption. I chose the JSON format because the ENEDIS API sends the data in JSON and my goal at the time was to train the model on the 5 years historical data and then move to online learning to keep it up to date. It's not online yet but it's one of my projects.  
-Before trainning the model, I wanted to analyse the data looking for trends. To do that I used the statsmodel module from Python. It can only extract trends from a dataset sampled every months but we can already learn a lot from this   
+**Key Steps and Achievements:**
 
-{{< figure src="/images/project-4/data.png" >}}
-*The whole dataset plotted*
-{{< figure src="/images/project-4/trend.png" >}}
-*The trend over the years*
-{{< figure src="/images/project-4/season.png" >}}
-*The seasonnality of the data*  
+**1. Data Preparation:**
 
-The first trend we can observe is that electricity consumption decreases. We can also see that the comsumption is very seasonnal: peaking in winter and low in the summer. RTE estimates that French consumption increases by 2400MW for each degree less in winter. This is mainly due to the heating of buildings (a third of French households are heated with electricity) as well as the production of hot water.  
+-Downloaded JSON data from the ENEDIS API.
+-Focused on timestamps and total consumption.
+-Chose JSON for compatibility with the ENEDIS API and future online learning updates.
 
-For the forecast model, I use the [Prophet](https://facebook.github.io/prophet/) procedure developed by Facebook, because it allows to have rigorous forecasts while integrating the trend effects that exist in the data as well as the dates (days of the week).  
-I wanted to also use a recurring neural network but it needed more data preprocessing and they are not necessarily more accurate than the Prophet models.  
+**2. Data Analysis:**
 
-After training on the data, the model is able to make predictions but also to give different decompositions of the data it was trained on.
+-Used Python's *statsmodel* module to identify trends and seasonal patterns.
+-Observed a decrease in overall electricity consumption.
+-Identified strong seasonality: peaks in winter, lows in summer, with a 2400MW increase per degree drop in temperature during winter.
 
-For example, we find the annual, weekly and daily decomposition.  
+**3. Forecast Model:**
+
+-Utilized Facebook’s [Prophet](https://facebook.github.io/prophet/) model for rigorous forecasts, integrating trends and weekly patterns.
+-Initially considered a recurrent neural network but chose Prophet for its ease and accuracy with less preprocessing.
+
+**4. Model Training and Results:**
+
+-Trained the model on five years of historical data.
+-The model provided detailed decompositions, aligning with ENEDIS’s seasonality reports.
+-Identified weekly patterns with lows on Sundays and daily patterns with lows after midnight and peaks at noon and dinner time.
+
+**5. Forecasting:**
+
+-Forecasted energy consumption from December 12 to 26, 2020.
+-Identified weekly trends and daily peaks/lows accurately.
+-Planned to update data and evaluate the model's error for continuous improvement.
+
+Some trends identified by Prophet:
 {{< figure src="/images/project-4/yearly.png" >}}
 *The yearly decomposition*
 {{< figure src="/images/project-4/weekly.png" >}}
@@ -31,14 +45,10 @@ For example, we find the annual, weekly and daily decomposition.
 {{< figure src="/images/project-4/daily.png" >}}
 *The daily decomposition*  
 
-The decomposition we get aligns with the seasonnality announced by ENEDIS. Also, since the model analyzes the data on time and not on months, it allows a finer decomposition than before. We then obtain a weekly decomposition with a minimum in the night from Saturday to Sunday, as well as a daily decomposition with a hollow after midnight and peaks at noon and dinner time.  
-
-Now that the model is trained, we can use it to forecast the consumption.  
+And the projected energy consumption :
 {{< figure src="/images/project-4/forecast.png" >}}
 *Forecasting a week ahead, balck dots are ENEDIS data, the blue line is the model's forecast and the light blue represents the model's uncertainty*   
 
-The data range from December 12 to 19, 2020, and the forecast extends until December 26. We find the weekly trend with a low on Sundays (13th and 20th), as well as the different peaks and lows during the days.  
-
-Visual examination is not enough to evaluate a model. To do this, I intend to update the data and evaluate the model's error on its forecasts.
+This project was my first introduction to time series analysis, data preprocessing, and forecasting using advanced models and even if it's imperfect, I'm really happy with the results I obtained.
 
 [Link to GitHub Repository](https://github.com/guillaumepaviot/energy-forecast)

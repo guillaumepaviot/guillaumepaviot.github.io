@@ -3,6 +3,6 @@ title: "Data Science Portfolio"
 featured_image: '/images/dennis-kummer-52gEprMkp7M-unsplash.jpg'
 description: "Hello! My name is Guillaume Paviot."
 ---
-I'm Guillaume Paviot, a data science student at the Technological University of Berlin. I love to explore the world around me with my friends and learn about new technologies.
+I'm Guillaume Paviot, a data scientist with a Master’s degree in Data Science from the Technological University of Berlin and an engineering degree from IMT Atlantique in Nantes. I have a passion for exploring the world with my friends and staying updated on new technologies.
 
-I'm interested in how data science can be used in environmental sciences to help us better understand the environments we live in.
+I am particularly interested in how data science can enhance our understanding of the environment we live in and improve our interactions with it.

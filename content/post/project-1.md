@@ -5,12 +5,16 @@ featured_image: "/images/project-1/full_graph.png"
 title: "A network of Twitter accounts"
 ---
 
-The goal of this project was to learn more about networks and use the Twitter API.  
-During a trending topic on Twitter and Twitch involving a lot of reactions from different communities, I scrapped almost 29 000 tweets from the API.  
-To be used in Gephi, I had to clean the data and scrape the missing values from other endpoints.
-Then, I separated the cleaned data into an edges CSV file and a nodes CSV file.  
-I loaded 24 000 nodes and 40 000 edges in Gephi and analysed the network using clustering and ranking algorithms.
-I also posted the final visualisation on Twitter with some findings and explainations about the graph.
+During the announcement of an event on Twitch that sparked significant reactions from various communities on Twitter, I scraped approximately 29,000 tweets using the API to learn more about network analysis and using an API.
+
+Key Steps and Achievements:
+
+**1.** **Data Cleaning and Enrichment**: I cleaned the data and retrieved missing values from additional endpoints to ensure data integrity for analysis in Gephi.
+**2.** **Data Preparation**: The cleaned data was organized into two CSV files: one for edges and one for nodes, resulting in 24,000 nodes (Twitter users) and 40,000 edges (interactions between Tweets through by someone).
+**3.** **Network Analysis**: I loaded the data into Gephi and conducted a comprehensive analysis using clustering and ranking algorithms to uncover patterns and insights.
+**4.** **Visualization and Communication**: I created a final visualization of the network, which I shared on Twitter along with key findings and explanations of the graph
+
+This project was really interesting and I learned a lot about managing a large dataset and communicating complex results to an audience that doesn't have a technical background.
 
 [Link to Network in full resolution](https://www.easyzoom.com/imageaccess/2ea1991c24ce43359b4feb22297d3c0c)  
 [Link to GitHub Repository](https://github.com/guillaumepaviot/twitter_graph)

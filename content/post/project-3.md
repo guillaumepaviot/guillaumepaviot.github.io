@@ -5,17 +5,29 @@ featured_image: "/images/project-3/logo_plastibot.jpg"
 title: "A chatbot talking about plastic"
 ---
 
-This group project was an academic project for the NGO [The Sea Cleaners](https://www.theseacleaners.org). The goal was to develop a chatbot to make their FAQ more attractive.  
-The requirements were :
-- the chatbot could be integrated in a website
-- the chatbot is interactive
-- the code is readable and the bot is easy to use for non coder   
+This academic group project, conducted for the NGO [The Sea Cleaners](https://www.theseacleaners.org), was aimed to develop a chatbot to enhance the attractiveness of their FAQ section.
 
-We choose to use Tensorflow to analyse the question and find and answer, and integrate it in Flask. The data (theme, different questions linked to this theme, different answers that the bot will use) is stored in a JSON file. To make the pocess of adding or changing questions, the client can use an EXCEL version of the file, that will be converted afte to a JSON file.  
-The goal of the neural network is to find which theme the user is talking about accoding to the JSON file. Once trained, we export the model so that it can be used on the Flask page.
-The demo webiste is very light, the backend only use a tokenizer and the traine dmodel to choose an answer from its data.  
-After trainning, the accuracy of our bot is more than 90% on the 84 themes it was trained on, is quick to answer and intuitive to change for the client.  
-In the end, the client chose our solution over the other group using a multiple questions choice bot.  
+**Key Requirements:**
+
+-Integratable into a website
+-Interactive and user-friendly
+-Readable code and easy-to-use for non-coders
+
+**Implementation Details:**
+
+**-Technology Stack**: We used TensorFlow for question analysis and Flask for integration.
+**-Data Management**: Themes, questions, and answers are stored in a JSON file. For ease of modification, clients can use an Excel version of the file, which is later converted to JSON.
+**-Neural Network Goal**: The neural network identifies the theme of the user's question based on the JSON file. Once trained, the model is exported for use on the Flask page.
+**-Backend**: The lightweight demo website uses a tokenizer and the trained model to select answers from its data.
+**-Frontend**: The website is built with simple HTML, CSS and Javascript.
+
+**Performance and Outcome:**
+
+-The chatbot achieved over 90% accuracy across 84 trained themes.
+-It is quick to respond and easy for the client to update.
+-Our solution was chosen by the client over a multiple-choice bot developed by another group.
+
+This project was a big success, both in terms of the solution we developed and in terms of how it went as a group.
 
 {{< figure src="/images/project-3/greetings.png" >}}
 *An example of the bot greeting the user*
