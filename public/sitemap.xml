@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://guillaumepaviot.github.io/post/project-2/</loc>
-    <lastmod>2022-09-05T11:00:59-04:00</lastmod>
+    <loc>https://guillaumepaviot.github.io/post/project-6/</loc>
+    <lastmod>2024-06-23T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://guillaumepaviot.github.io/</loc>
+    <lastmod>2024-06-23T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://guillaumepaviot.github.io/post/project-2/</loc>
     <lastmod>2022-09-05T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -42,10 +47,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://guillaumepaviot.github.io/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://guillaumepaviot.github.io/post/project-6/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

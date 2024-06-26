@@ -1,5 +1,5 @@
 ---
-date: 2024-06-023T10:58:08-04:00
+date: 2024-06-23T10:58:08-04:00
 description: "Developing a chatbot to assist a doctor with his appointments"
 featured_image: "images/project-6/healthcare-chatbot.png"
 title: "Chatbot to welcome patients"

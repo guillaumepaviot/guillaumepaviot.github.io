@@ -6,7 +6,19 @@
     <description>Recent content in Data Science Portfolio on Guillaume Paviot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Sep 2022 11:00:59 -0400</lastBuildDate><atom:link href="https://guillaumepaviot.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jun 2024 10:58:08 -0400</lastBuildDate><atom:link href="https://guillaumepaviot.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chatbot to welcome patients</title>
+      <link>https://guillaumepaviot.github.io/post/project-6/</link>
+      <pubDate>Sun, 23 Jun 2024 10:58:08 -0400</pubDate>
+      
+      <guid>https://guillaumepaviot.github.io/post/project-6/</guid>
+      <description>To streamline the process of greeting patients and collecting their basic information for paperwork, I developed a solution for a doctor&amp;rsquo;s office. The goal was to gather patient details and generate referral letters for their primary care physicians efficiently.
+Implementation Details:
+1. Chatbot Development:
+Built using Streamlit to ask fixed questions typically required by the doctor, tailored to the patient&amp;rsquo;s appointment reason. Utilized an open-source large language model (LLM) to draft referral letters based on the collected information for the doctor&amp;rsquo;s review.</description>
+    </item>
+    
     <item>
       <title>A poem generator</title>
       <link>https://guillaumepaviot.github.io/post/project-2/</link>
@@ -61,18 +73,6 @@ Key Requirements:
 -Integratable into a website -Interactive and user-friendly -Readable code and easy-to-use for non-coders
 Implementation Details:
 -Technology Stack: We used TensorFlow for question analysis and Flask for integration. -Data Management: Themes, questions, and answers are stored in a JSON file. For ease of modification, clients can use an Excel version of the file, which is later converted to JSON.</description>
-    </item>
-    
-    <item>
-      <title>Chatbot to welcome patients</title>
-      <link>https://guillaumepaviot.github.io/post/project-6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://guillaumepaviot.github.io/post/project-6/</guid>
-      <description>To streamline the process of greeting patients and collecting their basic information for paperwork, I developed a solution for a doctor&amp;rsquo;s office. The goal was to gather patient details and generate referral letters for their primary care physicians efficiently.
-Implementation Details:
-1. Chatbot Development:
-Built using Streamlit to ask fixed questions typically required by the doctor, tailored to the patient&amp;rsquo;s appointment reason. Utilized an open-source large language model (LLM) to draft referral letters based on the collected information for the doctor&amp;rsquo;s review.</description>
     </item>
     
     <item>
