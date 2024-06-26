@@ -7,4 +7,4 @@ featured_image: '/images/jeremy-thomas-rMmibFe4czY-unsplash.jpg'
 
 I studied engineering and environmental science at IMT Atlantique in Nantes, France, and computer science at TU Berlin in Germany.
 
-I've always been passionate about computer science and the environment. While working on some side projects like video games or twitter events, I've had the opportunity to apply my skills to real-world problems. Now I'm looking forward to using machine learning and data science in real life projects.
+Passionate about both computer science and the environment, I've applied my skills to real-world problems through various side projects, such as developing chatbots and language models. Now, I'm excited to use machine learning and data science in real-life projects.
